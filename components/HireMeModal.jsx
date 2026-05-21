@@ -1,15 +1,78 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
+import { useState } from 'react';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Software Engineer',
+	'Full-Stack Developer',
+	'Front-End Developer',
+	'Back-End Developer',
+	'Database Developer',
+	'Web Developer',
+	
 ];
 
 function HireMeModal({ onClose, onRequest }) {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		subject: selectOptions[0],
+		message: ''
+	});
+	const [loading, setLoading] = useState(false);
+	const [submitStatus, setSubmitStatus] = useState('');
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData(prev => ({
+			...prev,
+			[name]: value
+		}));
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setLoading(true);
+		setSubmitStatus('');
+
+		try {
+			const response = await fetch('/api/send-hire-request', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData)
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				setSubmitStatus('success');
+				setFormData({
+					name: '',
+					email: '',
+					subject: selectOptions[0],
+					message: ''
+				});
+				if (onRequest) {
+					onRequest();
+				}
+				setTimeout(() => {
+					onClose();
+				}, 2000);
+			} else {
+				setSubmitStatus('error');
+				console.error('Error:', data.error);
+			}
+		} catch (error) {
+			setSubmitStatus('error');
+			console.error('Error sending request:', error);
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -26,7 +89,7 @@ function HireMeModal({ onClose, onRequest }) {
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
 							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What project are you looking for?
+								What are you looking for?
 							</h5>
 							<button
 								onClick={onClose}
@@ -37,9 +100,7 @@ function HireMeModal({ onClose, onRequest }) {
 						</div>
 						<div className="modal-body p-5 w-full h-full">
 							<form
-								onSubmit={(e) => {
-									e.preventDefault();
-								}}
+								onSubmit={handleSubmit}
 								className="max-w-xl m-4 text-left"
 							>
 								<div className="">
@@ -51,6 +112,8 @@ function HireMeModal({ onClose, onRequest }) {
 										required
 										placeholder="Name"
 										aria-label="Name"
+										value={formData.name}
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="mt-6">
@@ -58,10 +121,12 @@ function HireMeModal({ onClose, onRequest }) {
 										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
 										id="email"
 										name="email"
-										type="text"
+										type="email"
 										required
 										placeholder="Email"
 										aria-label="Email"
+										value={formData.email}
+										onChange={handleChange}
 									/>
 								</div>
 								<div className="mt-6">
@@ -69,9 +134,10 @@ function HireMeModal({ onClose, onRequest }) {
 										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
 										id="subject"
 										name="subject"
-										type="text"
 										required
 										aria-label="Project Category"
+										value={formData.subject}
+										onChange={handleChange}
 									>
 										{selectOptions.map((option) => (
 											<option
@@ -92,14 +158,28 @@ function HireMeModal({ onClose, onRequest }) {
 										cols="14"
 										rows="6"
 										aria-label="Details"
-										placeholder="Project description"
+										placeholder="Position Description and Requirements"
+										value={formData.message}
+										onChange={handleChange}
 									></textarea>
 								</div>
 
+								{submitStatus === 'success' && (
+									<div className="mt-6 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-md">
+										Request sent successfully!
+									</div>
+								)}
+
+								{submitStatus === 'error' && (
+									<div className="mt-6 p-3 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 rounded-md">
+										Failed to send request. Please try again.
+									</div>
+								)}
+
 								<div className="mt-6 pb-4 sm:pb-1">
-									<span
-										onClick={onRequest}
+									<button
 										type="submit"
+										disabled={loading}
 										className="px-4
 											sm:px-6
 											py-2
@@ -107,12 +187,13 @@ function HireMeModal({ onClose, onRequest }) {
 											text-white
 											bg-indigo-500
 											hover:bg-indigo-600
+											disabled:bg-indigo-300
 											rounded-md
 											focus:ring-1 focus:ring-indigo-900 duration-500"
 										aria-label="Submit Request"
 									>
-										<Button title="Send Request" />
-									</span>
+										<Button title={loading ? "Sending..." : "Send Request"} />
+									</button>
 								</div>
 							</form>
 						</div>

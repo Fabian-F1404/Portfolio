@@ -1,23 +1,17 @@
 function AppFooterCopyright() {
 	return (
-		<div className="font-general-regular flex justify-center items-center text-center">
+		<div className="row font-general-regular flex justify-center items-center text-center">
 			<div className="text-lg text-ternary-dark dark:text-ternary-light">
 				&copy; {new Date().getFullYear()}
-				<a
-					href="https://github.com/realstoman/nextjs-tailwindcss-portfolio"
-					target="__blank"
-					className="hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
+				<p
+					className="text-indigo-500 dark:text-indigo-400 font-general-medium inline-block mx-1"
 				>
-					Next.js & Tailwind CSS Portfolio
-				</a>
-				.{' '}
-				<a
-					href="https://stoman.me"
-					target="__blank"
-					className="text-secondary-dark dark:text-secondary-light font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
-				>
-					Stoman
-				</a>
+					Fabián Andrés Fernández Soto Portfolio
+				</p>
+				.{' '}All rights reserved.
+				<p className="text-sm text-gray-400 mt-1">
+					Developed by Fabián Andrés Fernández Soto.
+				</p>
 			</div>
 		</div>
 	);
