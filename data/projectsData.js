@@ -6,16 +6,16 @@ export const projectsData = [
 		title: 'ERP Web Platform — Sistemas Galileo',
 		url: 'erp-web-platform-galileo',
 		category: 'Web Application',
-		img: '/images/web-project-1.jpg',
+		img: '/images/tstudio.png',
 		ProjectHeader: {
 			title: 'ERP Web Platform — Sistemas Galileo',
 			publishDate: 'Jan 2024 – Present',
 			tags: 'AngularJS / NodeJS / Oracle',
 		},
 		ProjectImages: [
-			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/web-project-1.jpg' },
-			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/web-project-2.jpg' },
-			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/ui-project-1.jpg' },
+			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/sas.png' },
+			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/sas2.png' },
+			{ id: uuidv4(), title: 'ERP Web Platform', img: '/images/sas3.png' },
 		],
 		ProjectInfo: {
 			ClientHeading: 'About the project',
@@ -75,16 +75,15 @@ export const projectsData = [
 		title: 'Enterprise Web Apps — Procter & Gamble',
 		url: 'enterprise-web-pg',
 		category: 'Web Application',
-		img: '/images/web-project-2.jpg',
+		img: '/images/pg.jpg',
 		ProjectHeader: {
 			title: 'Enterprise Web Apps — Procter & Gamble',
 			publishDate: 'Nov 2022 – Dec 2023',
-			tags: 'ASP.NET / C# / SQL Server',
+			tags: 'ASP.NET / C# /Javascript / JQuery / SQL Server',
 		},
 		ProjectImages: [
-			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/web-project-2.jpg' },
-			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/web-project-1.jpg' },
-			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/ui-project-2.jpg' },
+			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/pg2.jpg' },
+			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/pg.jpg' },
 		],
 		ProjectInfo: {
 			ClientHeading: 'About the project',
@@ -137,16 +136,16 @@ export const projectsData = [
 		title: 'Fintech Frontend Platform — 5050 Capital',
 		url: 'fintech-frontend-5050-capital',
 		category: 'Web Application',
-		img: '/images/ui-project-1.jpg',
+		img: '/images/bbop.png',
 		ProjectHeader: {
 			title: 'Fintech Frontend Platform — 5050 Capital',
 			publishDate: 'Mar 2021 – Oct 2022',
 			tags: 'ReactJS / NodeJS / Tailwind',
 		},
 		ProjectImages: [
-			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/ui-project-1.jpg' },
-			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/web-project-1.jpg' },
-			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/mobile-project-1.jpg' },
+			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/bbop2.png' },
+			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/bbop3.png' },
+			{ id: uuidv4(), title: '5050 Capital Platform', img: '/images/bbop4.png' },
 		],
 		ProjectInfo: {
 			ClientHeading: 'About the project',

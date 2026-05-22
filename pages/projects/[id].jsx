@@ -1,9 +1,26 @@
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 
 function ProjectSingle(props) {
+	const [selectedImage, setSelectedImage] = useState(null);
+
+	useEffect(() => {
+		const handleEsc = (event) => {
+			if (event.key === 'Escape') {
+				setSelectedImage(null);
+			}
+		};
+
+		window.addEventListener('keydown', handleEsc);
+
+		return () => {
+			window.removeEventListener('keydown', handleEsc);
+		};
+	}, []);
+
 	return (
 		<div className="container mx-auto">
 			<PagesMetaHead title={props.project.title} />
@@ -40,13 +57,32 @@ function ProjectSingle(props) {
 								alt={project.title}
 								key={project.id}
 								layout="responsive"
-								width={100}
-								height={90}
+								width={200}
+								height={150}
+								onClick={() => setSelectedImage(project.img)}
 							/>
 						</div>
 					);
 				})}
 			</div>
+
+			{/* Modal */}
+			{selectedImage && (
+				<div
+					className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+					onClick={() => setSelectedImage(null)}
+				>
+					<div className="relative w-[90%] max-w-5xl" onClick={(e) => e.stopPropagation()}>
+						<Image
+							src={selectedImage}
+							alt="Preview"
+							width={1200}
+							height={800}
+							className="rounded-xl object-contain"
+						/>
+					</div>
+				</div>
+			)}
 
 			{/* Info */}
 			<div className="block sm:flex gap-0 sm:gap-10 mt-14">
