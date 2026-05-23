@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const projectsData = [
 	{
 		id: 1,
-		title: 'ERP Web Platform — Sistemas Galileo',
+		title: 'SAS — Sistemas Galileo',
 		url: 'erp-web-platform-galileo',
 		category: 'Web Application',
 		img: '/images/tstudio.png',
@@ -72,18 +72,19 @@ export const projectsData = [
 	},
 	{
 		id: 2,
-		title: 'Enterprise Web Apps — Procter & Gamble',
+		title: 'HR Vendor — Procter & Gamble',
 		url: 'enterprise-web-pg',
 		category: 'Web Application',
-		img: '/images/pg.jpg',
+		img: '/images/claude.png',
 		ProjectHeader: {
 			title: 'Enterprise Web Apps — Procter & Gamble',
 			publishDate: 'Nov 2022 – Dec 2023',
 			tags: 'ASP.NET / C# /Javascript / JQuery / SQL Server',
 		},
 		ProjectImages: [
-			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/pg2.jpg' },
-			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/pg.jpg' },
+			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/claude.png' },
+			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/claude2.png' },
+			{ id: uuidv4(), title: 'P&G Enterprise App', img: '/images/claude3.png' },
 		],
 		ProjectInfo: {
 			ClientHeading: 'About the project',
@@ -133,7 +134,7 @@ export const projectsData = [
 	},
 	{
 		id: 3,
-		title: 'Fintech Frontend Platform — 5050 Capital',
+		title: 'Bbop — 5050 Capital',
 		url: 'fintech-frontend-5050-capital',
 		category: 'Web Application',
 		img: '/images/bbop.png',
