@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function AboutMeBio() {
+	const { t } = useTranslation('about');
 	const { language, mounted } = useContext(LanguageContext);
 	const [bios] = useState({
 		en: [
@@ -22,29 +24,60 @@ function AboutMeBio() {
 	}
 
 	return (
-		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
-			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
-				<Image
-					src="/images/profile.png"
-					width={200}
-					height={200}
-					className="rounded-lg"
-					alt="Profile Image"
-				/>
-			</div>
+		<div>
+			<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
+				<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
+					<Image
+						src="/images/profile.png"
+						width={200}
+						height={200}
+						className="rounded-lg"
+						alt="Profile Image"
+					/>
+				</div>
 
-			<div className="font-general-regular w-full sm:w-3/4 text-left">
-				{bios[language].map((bio, idx) => (
-					<p
-						className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-						key={idx}
-					>
-						{bio}
+				<div className="font-general-regular w-full sm:w-3/4 text-left">
+					{bios[language].map((bio, idx) => (
+						<p
+							className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
+							key={idx}
+						>
+							{bio}
+						</p>
+					))}
+				</div>
+				
+			</div>
+			<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
+				<div className="font-general-regular w-full text-left mt-10">
+					<p className="font-general-medium text-2xl md:text-2xl lg:text-2xl mb-1 text-ternary-dark dark:text-ternary-light">
+						{t('skills.heading')}
 					</p>
-				))}
+					<p className="font-general-regular text-left text-ternary-dark dark:text-ternary-light text-lg mt-4">
+						{t('skills.skillsList').map((skill, idx) => (
+							<span key={idx} className="block mb-2">
+								{skill}
+							</span>
+						))}
+					</p>
+				</div>
+				<div className="font-general-regular w-full text-center mt-10 md:grid md:justify-center lg:grid lg:justify-center">
+					<p className="font-general-medium text-2xl md:text-2xl lg:text-2xl mb-1 text-ternary-dark dark:text-ternary-light">
+						{t('skills.headingSoft')}
+					</p>
+					<p className="font-general-regular text-ternary-dark dark:text-ternary-light text-lg mb-24">
+						{t('skills.skillsListSoft').map((skill, idx) => (
+							<span key={idx} className="block mb-2 text-justify">
+								{skill}
+							</span>
+						))}
+					</p>
+				</div>
+
+				
 			</div>
 		</div>
-	);
+	);		
 }
 
 export default AboutMeBio;

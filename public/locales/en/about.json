@@ -14,5 +14,17 @@
     "projects": "Projects Completed",
     "clients": "Happy Clients",
     "cups": "Cups of Coffee"
+  },
+  "skills": {
+    "heading": "Tech Skills ",
+    "headingSoft": "Soft Skills",
+    "skillsList": ["Backend & Databases: NodeJS, SQL, Oracle, SQL Developer, SQL Server, MySQL, Neo4j.",
+        "Frontend: AngularJS, ReactJS, NextJS, HTML, CSS, JavaScript, Tailwind, Bootstrap, SASS, Google Map library.",
+        "Languages & Frameworks: JavaScript, TypeScript, C#, ASP.NET, .NET Core 5, AJAX, Entity Framework.",
+        "Tools & DevOps: Git, Docker, AWS, GitLab, GitHub Actions, Jira, Postman, Linux.",
+        "Architecture & Patterns: MVC, MVVM, Dependency Injection, Singleton, Adapter, Observer.",
+        "Languages: Spanish (Native), English (Advanced B2+)."
+    ],
+    "skillsListSoft": ["• Teamwork", "• Problem Solving", "• Adaptability", "• Fast Learning", "• Research", "• Project Management"]
   }
 }

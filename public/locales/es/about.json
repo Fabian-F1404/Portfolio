@@ -13,5 +13,23 @@
     "experience": "Años de Experiencia",
     "projects": "Proyectos Completados",
     "clients": "Clientes Satisfechos"
-  }
+  },
+  "skills": {
+    "heading": "Habilidades Tech",
+    "headingSoft": "Habilidades Blandas",
+    "skillsList": ["Backend & Bases de Datos: NodeJS, SQL, Oracle, SQL Developer, SQL Server, MySQL, Neo4j.",
+        "Frontend: AngularJS, ReactJS, NextJS, HTML, CSS, JavaScript, Tailwind, Bootstrap, SASS, Google Map library.",
+        "Lenguajes y Frameworks: JavaScript, TypeScript, C#, ASP.NET, .NET Core 5, AJAX, Entity Framework.",
+        "Herramientas y DevOps: Git, Docker, AWS, GitLab, GitHub Actions, Jira, Postman, Linux.",
+        "Arquitectura y Patrones: MVC, MVVM, Dependency Injection, Singleton, Adapter, Observer.",
+        "Idiomas: Español (Nativo), Inglés (Avanzado B2+)."
+    ],
+    "skillsListSoft": ["• Trabajo en Equipo", 
+    "• Resolución de Problemas", 
+    "• Adaptabilidad", 
+    "• Aprendizaje Rápido", 
+    "• Investigación", 
+    "• Gestión de Proyectos"
+    ]
+}
 }
