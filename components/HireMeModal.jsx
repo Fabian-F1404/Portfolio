@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import { useState } from 'react';
 import Button from './reusable/Button';
+import { useTranslation } from '../hooks/useTranslation';
 
 const selectOptions = [
 	'Software Engineer',
@@ -14,6 +15,7 @@ const selectOptions = [
 ];
 
 function HireMeModal({ onClose, onRequest }) {
+	const { t } = useTranslation('contact');
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
@@ -89,7 +91,7 @@ function HireMeModal({ onClose, onRequest }) {
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
 							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What are you looking for?
+								{t('contact.heading')}
 							</h5>
 							<button
 								onClick={onClose}
@@ -110,7 +112,7 @@ function HireMeModal({ onClose, onRequest }) {
 										name="name"
 										type="text"
 										required
-										placeholder="Name"
+										placeholder={t('contact.form.name')}
 										aria-label="Name"
 										value={formData.name}
 										onChange={handleChange}
@@ -123,7 +125,7 @@ function HireMeModal({ onClose, onRequest }) {
 										name="email"
 										type="email"
 										required
-										placeholder="Email"
+										placeholder={t('contact.form.email')}
 										aria-label="Email"
 										value={formData.email}
 										onChange={handleChange}
@@ -158,7 +160,7 @@ function HireMeModal({ onClose, onRequest }) {
 										cols="14"
 										rows="6"
 										aria-label="Details"
-										placeholder="Position Description and Requirements"
+										placeholder={t('contact.description')}
 										value={formData.message}
 										onChange={handleChange}
 									></textarea>
@@ -166,13 +168,13 @@ function HireMeModal({ onClose, onRequest }) {
 
 								{submitStatus === 'success' && (
 									<div className="mt-6 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-md">
-										Request sent successfully!
+										{t('contact.form.success')}
 									</div>
 								)}
 
 								{submitStatus === 'error' && (
 									<div className="mt-6 p-3 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 rounded-md">
-										Failed to send request. Please try again.
+										{t('contact.form.error')}
 									</div>
 								)}
 
@@ -192,7 +194,7 @@ function HireMeModal({ onClose, onRequest }) {
 											focus:ring-1 focus:ring-indigo-900 duration-500"
 										aria-label="Submit Request"
 									>
-										<Button title={loading ? "Sending..." : "Send Request"} />
+										<Button title={loading ? t('contact.form.sending') : t('contact.form.send')} />
 									</button>
 								</div>
 							</form>
@@ -208,7 +210,7 @@ function HireMeModal({ onClose, onRequest }) {
 									focus:ring-1 focus:ring-indigo-900 duration-500"
 								aria-label="Close Modal"
 							>
-								<Button title="Close" />
+								<Button title={t('contact.form.close')} />
 							</span>
 						</div>
 					</div>

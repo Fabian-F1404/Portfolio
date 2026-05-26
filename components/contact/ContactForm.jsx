@@ -1,6 +1,7 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
 import { useState } from 'react';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ function ContactForm() {
 	});
 	const [loading, setLoading] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState('');
+	const { t } = useTranslation('contact');
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -64,39 +66,39 @@ function ContactForm() {
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-						Contact Form
+						{t('contact.formCaption')}
 					</p>
 
 					<FormInput
-						inputLabel="Full Name"
+						inputLabel={t('contact.form.name')}
 						labelFor="name"
 						inputType="text"
 						inputId="name"
 						inputName="name"
-						placeholderText="Your Name"
-						ariaLabelName="Name"
+						placeholderText={t('contact.form.name')}
+						ariaLabelName={t('contact.form.name')}
 						value={formData.name}
 						onChange={handleChange}
 					/>
 					<FormInput
-						inputLabel="Email"
+						inputLabel={t('contact.form.email')}
 						labelFor="email"
 						inputType="email"
 						inputId="email"
 						inputName="email"
-						placeholderText="Your email"
-						ariaLabelName="Email"
+						placeholderText={t('contact.form.email')}
+						ariaLabelName={t('contact.form.email')}
 						value={formData.email}
 						onChange={handleChange}
 					/>
 					<FormInput
-						inputLabel="Subject"
+						inputLabel={t('contact.form.subject')}
 						labelFor="subject"
 						inputType="text"
 						inputId="subject"
 						inputName="subject"
-						placeholderText="Subject"
-						ariaLabelName="Subject"
+						placeholderText={t('contact.form.subject')}
+						ariaLabelName={t('contact.form.subject')}
 						value={formData.subject}
 						onChange={handleChange}
 					/>
@@ -106,7 +108,7 @@ function ContactForm() {
 							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 							htmlFor="message"
 						>
-							Message
+							{t('contact.form.message')}
 						</label>
 						<textarea
 							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -122,13 +124,13 @@ function ContactForm() {
 
 					{submitStatus === 'success' && (
 						<div className="mt-6 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-md">
-							Message sent successfully! We'll get back to you soon.
+							{t('contact.form.success')}
 						</div>
 					)}
 
 					{submitStatus === 'error' && (
 						<div className="mt-6 p-3 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100 rounded-md">
-							Failed to send message. Please try again.
+							{t('contact.form.error')}
 						</div>
 					)}
 
@@ -140,7 +142,7 @@ function ContactForm() {
 							aria-label="Send Message"
 						>
 							<Button
-								title={loading ? "Sending..." : "Send Message"}
+								title={loading ? t('contact.form.sending') : t('contact.form.send')}
 								type="submit"
 							/>
 						</button>

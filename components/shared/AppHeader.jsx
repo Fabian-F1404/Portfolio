@@ -3,12 +3,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
+import { useTranslation } from '../../hooks/useTranslation';
 import HireMeModal from '../HireMeModal';
+import LanguageSwitcher from '../LanguageSwitcher';
 import logoLight from '../../public/images/logo-light.svg';
 import logoDark from '../../public/images/logo-dark.svg';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
+	const { t } = useTranslation('common');
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
@@ -114,17 +117,17 @@ function AppHeader() {
 				>
 					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
 						<Link href="/projects" aria-label="Projects">
-							Projects
+							{t('nav.projects')}
 						</Link>
 					</div>
 					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<Link href="/about" aria-label="About Me">
-							About Me
+							{t('nav.about')}
 						</Link>
 					</div>
 					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<Link href="/contact" aria-label="Contact">
-							Contact
+							{t('nav.contact')}
 						</Link>
 					</div>
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
@@ -133,7 +136,7 @@ function AppHeader() {
 							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
 							aria-label="Hire Me Button"
 						>
-							Hire Me
+							{t('nav.hireMe')}
 						</button>
 					</div>
 				</div>
@@ -144,20 +147,20 @@ function AppHeader() {
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
-						<Link href="/projects">Projects</Link>
+						<Link href="/projects">{t('nav.projects')}</Link>
 					</div>
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="About Me"
 					>
-						<Link href="/about">About Me</Link>
+						<Link href="/about">{t('nav.about')}</Link>
 					</div>
 
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Contact"
 					>
-						<Link href="/contact">Contact</Link>
+						<Link href="/contact">{t('nav.contact')}</Link>
 					</div>
 				</div>
 
@@ -169,7 +172,7 @@ function AppHeader() {
 							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
 							aria-label="Hire Me Button"
 						>
-							Hire Me
+							{t('nav.hireMe')}
 						</button>
 					</div>
 
@@ -184,6 +187,11 @@ function AppHeader() {
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
+					</div>
+
+					{/* Language Switcher */}
+					<div className="ml-4">
+						<LanguageSwitcher />
 					</div>
 				</div>
 			</div>

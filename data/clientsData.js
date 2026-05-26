@@ -16,14 +16,15 @@ export const clientsData = [
 	},
 	{
 		id: uuidv4(),
-		title: 'Procter & Gamble',
-		img: ProcterImage,
-	},
-	{
-		id: uuidv4(),
 		title: 'Infotree Global Solutions',
 		img: InfotreeImage,
 	},
+	{
+		id: uuidv4(),
+		title: 'Procter & Gamble',
+		img: ProcterImage,
+	},
+	
 	{
 		id: uuidv4(),
 		title: 'Sistemas Galileo del Sur',

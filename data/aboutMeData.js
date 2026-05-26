@@ -7,7 +7,7 @@ export const aboutMeData = [
 	},
 	{
 		id: uuidv4(),
-		bio: "Over my career I've contributed to enterprise platforms at Procter & Gamble, fintech products at 5050 Capital, and ERP systems at Sistemas Galileo del Sur. I'm comfortable across the stack — whether that's implementing CI/CD pipelines with GitHub Actions, deploying services on AWS with Docker, managing ETL flows with Neo4j, or translating Figma designs into pixel-perfect Tailwind layouts.",
+		bio: "Over my career I've contributed to enterprise platforms at Procter & Gamble, fintech products at 5050 Capital, and ERP systems at Sistemas Galileo del Sur. I'm comfortable across the stack — whether that's implementing CI/CD pipelines with GitHub Actions, deploying services on GitLab, AWS and Docker, or translating Figma designs into pixel-perfect Tailwind layouts.",
 	},
 	{
 		id: uuidv4(),

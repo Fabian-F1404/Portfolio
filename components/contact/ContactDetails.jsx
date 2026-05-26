@@ -1,4 +1,5 @@
 import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const contacts = [
 	{
@@ -19,11 +20,12 @@ const contacts = [
 ];
 
 function ContactDetails() {
+	const { t } = useTranslation('contact');
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="text-left max-w-xl px-6">
 				<h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
-					Contact details
+					{t('contact.detailCaption')}
 				</h2>
 				<ul>
 					{contacts.map((contact) => (

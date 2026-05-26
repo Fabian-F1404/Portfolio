@@ -8,7 +8,7 @@ export const projectsData = [
 		category: 'Web Application',
 		img: '/images/tstudio.png',
 		ProjectHeader: {
-			title: 'ERP Web Platform — Sistemas Galileo',
+			title: 'SAS — Sistemas Galileo',
 			publishDate: 'Jan 2024 – Present',
 			tags: 'AngularJS / NodeJS / Oracle',
 		},
@@ -27,7 +27,7 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Overview',
 			ObjectivesDetails:
-				'Develop, enhance, and maintain a suite of enterprise web applications used across the organization. Responsibilities span frontend development in AngularJS, backend APIs in NodeJS, database optimization on Oracle, and infrastructure deployment using AWS and Docker.',
+				'Develop, enhance, and maintain a suite of enterprise web applications used across the organization. Responsibilities span frontend development in AngularJS, backend APIs in NodeJS, database optimization on Oracle, and infrastructure deployment using GitLab, AWS and Docker.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -50,7 +50,12 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Built and maintained AngularJS frontend modules and RESTful NodeJS APIs, improving feature delivery velocity across multiple product teams.',
+						'Built and maintained AngularJS frontend modules and RESTful NodeJS APIs, improving feature delivery across users meeting and stakeholders.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Integrate LDAP for centralized user management and access control.',
 				},
 				{
 					id: uuidv4(),
@@ -60,7 +65,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Implemented ETL pipelines using Neo4j Aura for graph-based data transformation and integrated LDAP for centralized user management and access control.',
+						'Implemented ETL pipelines using Neo4j Aura for graph-based data transformation and reporting.',
 				},
 				{
 					id: uuidv4(),
@@ -77,7 +82,7 @@ export const projectsData = [
 		category: 'Web Application',
 		img: '/images/claude.png',
 		ProjectHeader: {
-			title: 'Enterprise Web Apps — Procter & Gamble',
+			title: 'HR Vendor — Procter & Gamble',
 			publishDate: 'Nov 2022 – Dec 2023',
 			tags: 'ASP.NET / C# /Javascript / JQuery / SQL Server',
 		},
@@ -96,19 +101,19 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Overview',
 			ObjectivesDetails:
-				'Worked remotely on a global engineering team at P&G, developing and maintaining enterprise-grade internal web tools used across business units. Focus areas included .NET backend development, SQL Server database management, and frontend enhancements with JavaScript and AJAX.',
+				'Worked remotely on a global engineering team at P&G, developing and maintaining enterprise-grade internal web tools used across business units. Focus areas included .NET backend development, SQL Server database management, and frontend enhancements with JavaScript, JQuery and AJAX.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
 					techs: [
 						'ASP.NET',
 						'C#',
-						'.NET Core 5',
 						'JavaScript',
+						'JQuery',
 						'AJAX',
 						'SQL Server',
 						'Entity Framework',
-						'MVVM',
+						'MVC',
 					],
 				},
 			],
@@ -117,7 +122,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Developed and enhanced enterprise web applications in ASP.NET and C#, implementing new features based on evolving business requirements across multiple departments.',
+						'Developed and enhanced enterprise web applications in ASP.NET, C# and JavaScript, implementing new features based on evolving business user requirements.',
 				},
 				{
 					id: uuidv4(),
@@ -139,7 +144,7 @@ export const projectsData = [
 		category: 'Web Application',
 		img: '/images/bbop.png',
 		ProjectHeader: {
-			title: 'Fintech Frontend Platform — 5050 Capital',
+			title: 'Bbop — 5050 Capital',
 			publishDate: 'Mar 2021 – Oct 2022',
 			tags: 'ReactJS / NodeJS / Tailwind',
 		},
@@ -158,7 +163,7 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Overview',
 			ObjectivesDetails:
-				'Led frontend development for a fintech web platform, building reusable React component libraries, integrating REST APIs, and implementing authentication flows. Worked closely with designers to translate Figma mockups into responsive, production-ready layouts using Tailwind CSS.',
+				'Built frontend development for a fintech web platform, building reusable React component library, integrating REST APIs, and implementing authentication flows. Worked closely with designers to translate Figma mockups into responsive, production-ready layouts using Tailwind CSS.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -191,7 +196,12 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Translated Figma designs into pixel-perfect, fully responsive layouts with Tailwind CSS, and set up GitHub Actions CI/CD pipelines to automate testing and deployment.',
+						'Translated Figma designs into pixel-perfect, fully responsive layouts with Tailwind CSS, and guidance by GitHub Actions CI/CD pipelines to automate testing and deployment.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Guidance by GitHub Actions CI/CD pipelines to automate testing and deployment.',
 				},
 				{
 					id: uuidv4(),

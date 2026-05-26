@@ -3,10 +3,12 @@ import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { projectsData } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function ProjectsGrid() {
 	const [searchProject, setSearchProject] = useState();
 	const [selectProject, setSelectProject] = useState();
+	const { t } = useTranslation('projects');
 
 	// @todo - To be fixed
 	// const searchProjectsByTitle = projectsData.filter((item) => {
@@ -30,7 +32,7 @@ function ProjectsGrid() {
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects portfolio
+					{t('title')}
 				</p>
 			</div>
 
@@ -45,7 +47,7 @@ function ProjectsGrid() {
                         mb-3
                         "
 				>
-					Search projects by title or filter by category
+					{t('searchTitle')}
 				</h3>
 				<div
 					className="

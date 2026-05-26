@@ -2,16 +2,18 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function AppBanner() {
 	const [activeTheme] = useThemeSwitcher();
+	const { t } = useTranslation('common');
 
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-2"
+			className="flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-10 gap-10 lg:gap-12 lg:my-40"
 		>
 			<div className="w-full md:w-1/3 text-left">
 				<motion.h1
@@ -24,7 +26,7 @@ function AppBanner() {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					Hi, I'm Fabian
+					{t('common.hi')}
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -36,7 +38,7 @@ function AppBanner() {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					A Software Engineer & Full-Stack Developer
+					{t('common.software')}
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -56,7 +58,7 @@ function AppBanner() {
 					>
 						<FiArrowDownCircle className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
 						<span className="text-sm sm:text-lg duration-100">
-							Download CV
+							{t('common.downloadCV')}
 						</span>
 					</a>
 				</motion.div>
@@ -65,7 +67,7 @@ function AppBanner() {
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-				className="w-full sm:w-2/3 text-center float-center mt-8 sm:mt-0"
+				className="w-full sm:w-2/3 text-center float-center mt-8 sm:mt-0 lg:relative lg:overflow-visible"
 			>
 				<Image
 					src={
@@ -76,7 +78,7 @@ function AppBanner() {
 					alt="Developer"
 					width={400}
 					height={400}
-					className="w-auto h-auto mx-auto"
+					className="w-auto h-auto mx-auto lg:object-cover lg:scale-150"
 				/>
 			</motion.div>
 		</motion.section>

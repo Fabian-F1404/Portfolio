@@ -1,0 +1,17 @@
+{
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Conóceme mejor",
+    "bio1": "Soy Ingeniero de Software con 5 años de experiencia construyendo aplicaciones web, APIs REST y sistemas impulsados por SQL. He trabajado en todo el stack — desde crear frontends responsivos con React y Next.js hasta diseñar y optimizar esquemas de bases de datos complejos en Oracle y SQL Server. Prospero en ambientes ágiles y me enorgullece escribir código limpio, mantenible y de alto rendimiento a escala.",
+    "bio2": "A lo largo de mi carrera he contribuido a plataformas empresariales en Procter & Gamble, productos fintech en 5050 Capital y sistemas ERP en Sistemas Galileo del Sur. Me siento cómodo en todo el stack — ya sea implementando pipelines CI/CD con GitHub Actions, desplegando servicios en GitLab, AWS y Docker, o traduciendo diseños de Figma en layouts pixel-perfect con Tailwind.",
+    "bio3": "Ingeniero de Software con experiencia en diferentes tecnologías, pero con fuerte enfoque en desarrollo web y JavaScript, además de trabajar con C#, ASP.NET, SQL y lenguaje PLSQL, trabajando en todo el ciclo de vida del software. A lo largo de mi carrera profesional, he desarrollado competencias esenciales como trabajo en equipo, liderazgo, adaptabilidad, aprendizaje rápido, resolución de problemas y siempre me esfuerzo por aportar un enfoque proactivo y orientado a resultados. He liderado proyectos trabajando mano a mano con usuarios y stakeholders. Con mi experiencia puedo adaptarme rápidamente a cualquier tecnología incluso si no tengo suficiente experiencia en esa."
+  },
+  "clients": {
+    "heading": "Empresas en las que he trabajado"
+  },
+  "counter": {
+    "experience": "Años de Experiencia",
+    "projects": "Proyectos Completados",
+    "clients": "Clientes Satisfechos"
+  }
+}

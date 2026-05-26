@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "hireMe": "Hire Me"
+  },
+  "footer": {
+    "copyright": "© {{year}} Fabian Fernandez. All rights reserved.",
+    "followMe": "Follow Me"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "close": "Close",
+    "back": "Back",
+    "hi": "Hi, I'm Fabian!",
+    "software": "A Software Engineer & Full-Stack Developer",
+    "downloadCV": "Download CV"
+  }
+}

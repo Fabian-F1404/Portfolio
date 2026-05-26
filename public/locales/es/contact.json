@@ -1,0 +1,27 @@
+{
+  "contact": {
+    "formCaption": "Formulario de Contacto",
+    "detailsCaption": "Detalles de Contacto",
+    "title": "Contacto",
+    "subtitle": "Ponte en contacto",
+    "heading": "¡Hablemos!",
+    "description": "Siempre me interesa escuchar sobre nuevos proyectos y oportunidades.",
+    "detailCaption": "Detalles de Contacto",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado correctamente!",
+      "error": "Error al enviar el mensaje. Por favor, intenta de nuevo.",
+      "close": "Cerrar"
+    },
+    "details": {
+      "email": "Correo",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    }
+  }
+}

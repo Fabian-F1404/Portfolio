@@ -1,0 +1,90 @@
+{
+  "frontTitle": "Portafolio de Proyectos",
+  "searchTitle": "Busca proyectos por título o filtra por categoría",
+  "moreProjects": "Más Proyectos",
+  "title": "Proyectos",
+  "subtitle": "Mi trabajo reciente",
+  "filters": {
+    "all": "Todos",
+    "webApplication": "Aplicación Web",
+    "mobile": "Aplicación Móvil",
+    "design": "Aplicación de Escritorio"
+  },
+  "sasGalileo": {
+    "aboutCompany": "Empresa",
+    "roleD": "Rol",
+    "periodD": "Periodo",
+    "typeD": "Tipo",
+    "title": "SAS — Sistemas Galileo",
+    "category": "Aplicación Web",
+    "publishDate": "Ene 2024 – Presente",
+    "tags": "AngularJS / NodeJS / Oracle",
+    "aboutProject": "Acerca del proyecto",
+    "company": "Sistemas Galileo del Sur",
+    "role": "Ingeniero de Software",
+    "period": "Ene 2024 – Presente",
+    "type": "Aplicación Web Empresarial",
+    "overview": "Descripción general",
+    "overviewDetails": "Desarrollar, mejorar y mantener una aplicacion web empresariales utilizada en la organización. Las responsabilidades abarcan desarrollo frontend en AngularJS, APIs backend en NodeJS, optimización de bases de datos en Oracle e implementación de infraestructura usando GitLab, AWS y Docker.",
+    "toolsAndTechnologies": "Herramientas y Tecnologías",
+    "keyContributionsTitle": "Contribuciones clave",
+    "keyContributions": [
+        "Desarrollé y mejoré una aplicacion web empresarial en ASP.NET, C#, JQuery, AJAX y JavaScript, implementando nuevas funcionalidades basadas en requerimientos cambiantes de los usuarios de negocio. ", 
+        "Utilicé LDAP para la gestión centralizada de usuarios y control de acceso.",
+        "Analicé y optimicé consultas SQL, procedimientos almacenados, paquetes y trabajos programados en Oracle, reduciendo significativamente los tiempos de generación de informes críticos.",
+        "Implementé soluciones ETL utilizando Neo4j Aura para la transformación de datos basada en grafos y generación de informes.",
+        "Gestioné despliegues de aplicaciones a través de pipelines CI/CD en GitLab, contenedores Docker e infraestructura AWS.", 
+        "Introduje generación de casos de prueba asistida por IA para mejorar QA y construir software de calidad a través del prompt engineering."
+    ]
+  },
+  "hrVendorPG": {
+    "aboutCompany": "Empresa",
+    "roleD": "Rol",
+    "periodD": "Periodo",
+    "typeD": "Tipo",
+    "title": "HR Vendor — Procter & Gamble",
+    "category": "Aplicación Web",
+    "publishDate": "Nov 2022 – Dic 2023",
+    "tags": "ASP.NET / C# / Javascript / JQuery / SQL Server",
+    "aboutProject": "Acerca del proyecto",
+    "company": "Procter & Gamble (Remoto)",
+    "role": "Ingeniero de Software",
+    "period": "Nov 2022 – Dic 2023",
+    "type": "Aplicación Web Empresarial",
+    "overview": "Descripción general",
+    "overviewDetails": "Trabajé de forma remota en un equipo global de ingeniería en P&G, desarrollando y manteniendo herramientas web internas de nivel empresarial utilizadas en distintas unidades de negocio. Mis principales áreas de enfoque incluyeron desarrollo backend con .NET, gestión de bases de datos SQL Server y mejoras frontend utilizando JavaScript, JQuery y AJAX.",
+    "toolsAndTechnologies": "Herramientas y Tecnologías",
+    "keyContributionsTitle": "Contribuciones clave",
+    "keyContributions": [
+      "Desarrollé y mejoré una aplicacion web empresarial en ASP.NET, C# y JavaScript, implementando nuevas funcionalidades basadas en requerimientos cambiantes de los usuarios de negocio. ",
+      "Analicé y reescribí procedimientos almacenados complejos en SQL Server, reduciendo el tiempo de ejecución de consultas y mejorando el rendimiento general de la aplicación y la confiabilidad del sistema.",
+      "Creé y mantuve jobs, tablas y procedimientos en SQL Server para respaldar reportes automatizados y procesos de datos utilizados por equipos globales de operaciones."
+    ]
+  },
+  "bbop": {
+    "aboutCompany": "Empresa",
+    "roleD": "Rol",
+    "periodD": "Periodo",
+    "typeD": "Tipo",
+    "title": "Bbop — 5050 Capital",
+    "category": "Aplicación Web",
+    "publishDate": "Mar 2021 – Oct 2022",
+    "tags": "ReactJS / NodeJS / Tailwind",
+    "aboutProject": "Acerca del proyecto",
+    "company": "5050 Capital Company",
+    "role": "Desarrollador Frontend",
+    "period": "Mar 2021 – Oct 2022",
+    "type": "Aplicación Web",
+    "overview": "Descripción general",
+    "overviewDetails": "Desarrollo frontend para una plataforma web fintech, creando una app de reservas con componentes React reutilizables, integrando APIs REST e implementando flujos de autenticación con NodeJS. Trabajé estrechamente con diseñadores para traducir maquetas de Figma en layouts responsivos y listos para producción usando Tailwind CSS.",
+    "toolsAndTechnologies": "Herramientas y Tecnologías",
+    "keyContributionsTitle": "Contribuciones clave",
+    "keyContributions": [
+      "Construí una aplicación web escalable en ReactJS utilizando hooks y Redux para la gestión del estado, permitiendo patrones de UI consistentes en toda la plataforma y acelerando el desarrollo de funcionalidades.",
+      "Implementé integraciones de APIs REST utilizando NodeJS, ExpressJS y Sequelize, y agregué autenticación y autorización con OAuth / JWT para asegurar las sesiones de usuario.",
+      "Traducí diseños de Figma en interfaces pixel-perfect totalmente responsivas con Tailwind CSS, mejorando la experiencia del usuario en dispositivos móviles y de escritorio.",
+      "Brindé soporte mediante pipelines CI/CD con GitHub Actions para automatizar pruebas y despliegues.",
+      "Colaboré en un equipo Scrum utilizando Jira para la planificación de sprints, contribuyendo en el refinamiento de historias, estimaciones y retrospectivas a lo largo de un ciclo de proyecto de 18 meses."
+    ]
+  }
+}
