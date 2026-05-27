@@ -29,7 +29,7 @@
     "toolsAndTechnologies": "Herramientas y Tecnologías",
     "keyContributionsTitle": "Contribuciones clave",
     "keyContributions": [
-        "Desarrollé y mejoré una aplicacion web empresarial en ASP.NET, C#, JQuery, AJAX y JavaScript, implementando nuevas funcionalidades basadas en requerimientos cambiantes de los usuarios de negocio. ", 
+        "Desarrollé y mantuve módulos frontend de AngularJS y API RESTful de NodeJS, mejorando la entrega de funcionalidades en reuniones con usuarios y partes interesadas.", 
         "Utilicé LDAP para la gestión centralizada de usuarios y control de acceso.",
         "Analicé y optimicé consultas SQL, procedimientos almacenados, paquetes y trabajos programados en Oracle, reduciendo significativamente los tiempos de generación de informes críticos.",
         "Implementé soluciones ETL utilizando Neo4j Aura para la transformación de datos basada en grafos y generación de informes.",
